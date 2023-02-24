@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.vrprojekti.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\danie\\Desktop\\uusiVr\\VrProjekti\\VrProjekti\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\Dani\\Documents\\GitHub\\VrProjekti\\VrProjekti\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "VrProjekti [Testing]"
