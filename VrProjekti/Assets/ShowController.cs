@@ -20,7 +20,7 @@ public class ShowController : MonoBehaviour
             else
             {
                 hand.HideController();
-                hand.SetSkeletonRangeOfMotion(Valve.VR.EVRSkeletalMotionRange.WithController);
+               // hand.SetSkeletonRangeOfMotion(Valve.VR.EVRSkeletalMotionRange.WithController);
             }
         }
         
