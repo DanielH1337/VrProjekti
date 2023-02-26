@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
+using Valve.VR;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
@@ -9,6 +11,7 @@ public class SimpleShoot : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
+    
 
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
@@ -20,9 +23,12 @@ public class SimpleShoot : MonoBehaviour
     [Tooltip("Bullet Speed")] [SerializeField] private float shotPower = 500f;
     [Tooltip("Casing Ejection Speed")] [SerializeField] private float ejectPower = 150f;
 
+    public SteamVR_Action_Boolean fireAction;
+    private Interactable interactable;
 
     void Start()
     {
+        interactable = GetComponentInParent<Interactable>();
         if (barrelLocation == null)
             barrelLocation = transform;
 
@@ -32,11 +38,25 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
+        //if (Input.GetButton("Fire1"))
+        //{
+        //    gunAnimator.SetTrigger("Fire");
+        //}
         //If you want a different input, change it here
-        if (Input.GetButtonDown("Fire1"))
+        //Check if grabbed
+        if (interactable.attachedToHand != null)
+        {
+            SteamVR_Input_Sources source = interactable.attachedToHand.handType;
+            if (fireAction[source].stateDown)
+            {
+                //Calls animation on the gun that has the relevant animation events that will fire
+               
+                gunAnimator.SetTrigger("Fire");
+            }
+        }
         {
             //Calls animation on the gun that has the relevant animation events that will fire
-            gunAnimator.SetTrigger("Fire");
+           // gunAnimator.SetTrigger("Fire");
         }
     }
 
