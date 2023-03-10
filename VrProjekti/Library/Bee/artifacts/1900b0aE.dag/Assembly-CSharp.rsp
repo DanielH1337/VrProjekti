@@ -383,6 +383,7 @@
 "Assets/ApplyDamage.cs"
 "Assets/Nokobot/Modern Guns - Handgun/_Demo Assets/SimpleShoot.cs"
 "Assets/PlayerController.cs"
+"Assets/ScoreManager.cs"
 "Assets/ShowController.cs"
 "Assets/SimpleAttach.cs"
 "Assets/XRPlatformControllerSetup.cs"
