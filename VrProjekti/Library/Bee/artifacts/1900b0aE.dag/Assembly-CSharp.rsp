@@ -381,11 +381,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 "Assets/ApplyDamage.cs"
+"Assets/EnemyFollow.cs"
 "Assets/Nokobot/Modern Guns - Handgun/_Demo Assets/SimpleShoot.cs"
 "Assets/PlayerController.cs"
 "Assets/ScoreManager.cs"
 "Assets/ShowController.cs"
 "Assets/SimpleAttach.cs"
+"Assets/WallDisappearScript.cs"
 "Assets/XRPlatformControllerSetup.cs"
 -langversion:9.0
 

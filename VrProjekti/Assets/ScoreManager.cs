@@ -6,6 +6,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
+    public GameObject ammuttuTeksti;
     public TMP_Text scoreText;
     int score = 0;
     private void Awake()
@@ -24,6 +25,7 @@ public class ScoreManager : MonoBehaviour
         if(score >= 5)
         {
             scoreText.text = "Peli läpi";
+            ammuttuTeksti.SetActive(false);
         }
         else
         {
