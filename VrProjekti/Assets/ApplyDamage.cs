@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ApplyDamage : MonoBehaviour
 {
+
+    private void Start()
+    {
+        StartCoroutine(DestroyBullet());
+    }
     private void OnCollisionEnter(Collision collision)
     {
         //Apply Damage to balloon
@@ -15,4 +20,10 @@ public class ApplyDamage : MonoBehaviour
         }
         
     }
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(4f);
+        Destroy(gameObject);
+    }
+  
 }

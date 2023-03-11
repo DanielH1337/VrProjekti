@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+
 public class EnemyFollow : MonoBehaviour
 {
     public NavMeshAgent enemy;
@@ -26,17 +27,18 @@ public class EnemyFollow : MonoBehaviour
         if(enemy.remainingDistance < 0.5f && enemy.remainingDistance > 0)
         {
           //  Debug.Log(enemy.remainingDistance);
-            GameOwer();
+            GameOver();
             gameOverCheck = false;
                
         }
     }
-    private void GameOwer()
+    private void GameOver()
     {
         if (gameOverCheck)
         {
             Instantiate(GameOverText, VRcamera.position + (VRcamera.forward * 5), VRcamera.rotation);
             Time.timeScale = 0f;
+            
         }
   
     }
@@ -49,5 +51,6 @@ public class EnemyFollow : MonoBehaviour
             wall.GetComponent<WallDisappearScript>().isFading = true;
         }
     }
+   
 
 }
